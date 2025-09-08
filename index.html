@@ -2,11 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    HelloWorld!
+    <div class="leftPanel">
+        <image src="/images/8034948.png" class="imageXuy"></image>
+        <div class="leftPanelButton">
+        </div>
+        <button id="0" class="addButton" onclick="eventClickAdd()"></button>
+    </div>
+    <div class="main">
+        <div class="progress_main">
+            <p class="name"></p>
+            <button class="buttonDeleteChlen" onclick="deleteChlen()">Удалить писюн</button>
+            <div class="progress">
+                <div class="progress_text">
+                    <p></p>
+                    <p id="persent"></p>
+                </div>
+                <div id="white_bar"><div id="blue_bar"></div></div>
+            </div>
+        </div>
+        <div class="comments"></div>
+    </div>
+    <script src="app.js"></script>
 </body>
+<div class="addChlenPanel kick">
+    <div class="addChlen">
+        <p class="newChlen">Новый писюн</p>
+        <p class="choiceIcon">Иконка</p>
+        <div class="choiceButtonChlen">
+            <button name="Вода" class="buttonChlen" onclick="chooseIconNewChlen(event)"><img class="icon_left_panel" src="images/Вода.png"></button>
+            <button name="Штанга" class="buttonChlen" onclick="chooseIconNewChlen(event)"><img class="icon_left_panel" src="images/Штанга.png"</button>
+            <button name="Еда" class="buttonChlen" onclick="chooseIconNewChlen(event)"><img class="icon_left_panel" src="images/Еда.png"</button>
+        </div>
+        <form class="addChlenForm" onsubmit="addChlenButton(event)">
+            <input name="name" class="addChlenInput" placeholder="Название"></input>
+            <input name="target" class="addChlenInput" type="number" placeholder="Цель"></input>
+            <button class="addChlenButton" type="submit">Добавить</button>
+        </form>
+        <button class="closeButton" onclick="closePanel()"><img src="images/close.png" class="close"></button>
+    </div>
+</div>
 </html>
